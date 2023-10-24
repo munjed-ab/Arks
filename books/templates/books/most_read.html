@@ -1,0 +1,19 @@
+
+<!-- new topics  -->
+<div class="topics">
+  <div class="topics__header">
+    <h2>Most Read</h2>
+    <hr />
+  </div>
+  <ul class="topics__list">
+    {% for book in mostRead %}
+    <li>
+      <h3>
+        <a href="{% url 'book' book.id %}"
+          >{{book.name}}- {{book.participants.count}} reads</a
+        >
+      </h3>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

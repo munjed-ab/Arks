@@ -1,0 +1,46 @@
+<div class="search_box">
+  <form id="search" method="GET" action="{% url 'home' %}">
+    <input
+      type="text"
+      name="q"
+      id="search-input"
+      placeholder="Search for books..."
+    />
+  </form>
+</div>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- <script>
+  $(document).ready(function () {
+    var searchInput = $("#search-input");
+
+    var queryParams = new URLSearchParams(window.location.search);
+    var queryValue = queryParams.get("q");
+    if (queryValue) {
+      searchInput.val(queryValue);
+    }
+
+    searchInput.on("input", function () {
+      performSearch();
+    });
+
+    searchInput.focus();
+    searchInput[0].setSelectionRange(queryValue.length, queryValue.length);
+
+    function performSearch() {
+      var query = encodeURIComponent(searchInput.val()); // Encode the query
+      $.ajax({
+        type: "GET",
+        url: "{% url 'home' %}",
+        data: { q: query },
+        success: function (data) {
+          $("body").html(data);
+          // Update the URL without reloading the page
+          history.pushState(null, "", "{% url 'home' %}?q=" + query);
+        },
+        error: function (error) {
+          console.error("Search request failed: " + error);
+        },
+      });
+    }
+  });
+</script> -->

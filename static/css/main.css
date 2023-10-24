@@ -1,0 +1,142 @@
+
+/* Reset some default styles for the body and ul */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #c0bfc4;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  color: #c0bfc4;
+  text-decoration: none;
+}
+
+/* MESSAGES */
+.messages {
+  background-color: #f7f7f7;
+  border: 1px solid #ff1212;
+  padding: 5px;
+}
+
+.messages ul {
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #ff0000;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #596774;
+  color: #c0bfc4;
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* Add a high z-index to ensure it's on top of other content */
+  text-decoration: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+#user_username {
+  color: #c0bfc4;
+  text-align: right;
+  display: inline;
+  position: relative;
+  font-size: 30px;
+  right: 40%;
+}
+
+.login-link,
+.logout-link {
+  text-decoration: none;
+  color: #c0bfc4;
+  text-align: right;
+  position: relative;
+  right: 20%;
+  font-size: 30px;
+}
+.logout-link {
+  color: #773a3a;
+}
+.login-link {
+  color: #a69a9a;
+}
+
+/* SEARCH_BAR */
+.search_box {
+  border: 0.1px solid gray;
+  border-radius: 5px;
+  width: max-content;
+  background-color: white;
+  float: right;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+}
+form #search-input {
+  width: max-content;
+  height: 40px;
+  background-color: #d4d3da;
+  color: #596a7a;
+  border: none;
+  border-radius: 5px;
+}
+form input[type="password"] {
+  width: max-content;
+  height: 20px;
+  background-color: #dcdae4;
+  color: #596a7a;
+  border: none;
+  border-radius: 5px;
+}
+form input[type="text"] {
+  width: max-content;
+  height: 20px;
+  background-color: #dcdae4;
+  color: #596a7a;
+  border: none;
+  border-radius: 5px;
+}
+
+/* BOOKS */
+/* .book-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.books {
+  display: inline-table;
+  padding: 10px;
+
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+} */
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 
+Container styles to center the content
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+} */
