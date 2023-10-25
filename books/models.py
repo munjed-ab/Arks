@@ -9,7 +9,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
     bio = models.TextField(null=True)
 
-    avatar = models.ImageField(null=True, default="avatar.svg")
+    avatar = models.ImageField(upload_to="images/", null=True, default="avatar.svg")
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -29,7 +29,7 @@ class Book(models.Model):
     author = models.CharField(max_length=100)
     year = models.DateField()
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(null=True, default="R.jpeg")
+    image = models.ImageField(upload_to="images/", null=True, default="R.jpeg")
     participants = models.ManyToManyField(
         User, related_name="readers", blank=True, default=None
     )
