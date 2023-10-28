@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arks Books</h1>
+    <br />
+    <div id="books-container"></div>
+  </body>
+
+  <script>
+    let books_container = document.getElementById("books-container");
+    let getBooks = async () => {
+      let response = await fetch("https://arks.pythonanywhere.com/api/books/");
+      let books = await response.json();
+      for (let i = 0; i < books.length; i++) {
+        let book = books[i];
+        let row = `<div>
+                      <h2>${book.name}</h2>
+                      <h3 style="color:grey">${book.author}</h3>
+                      <br/>
+                  </div>`;
+        books_container.innerHTML += row;
+      }
+    };
+    getBooks();
+  </script>
+</html>
